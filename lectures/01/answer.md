@@ -157,6 +157,7 @@ AIの使い方やリテラシーを段階的に学ぶ際、以下のような3�
         | 3.6-flash | 講座固有 | 2/2 | 17.57 | 21 | 703 | 1138 |
 
     - ②レート制限の探索
+        - 探索スクリプト: `scripts/probe_rate_limit.py`（`uv run python -m scripts.probe_rate_limit`）
         - `gemini-3.5-flash-lite` に短い質問「1+1は？」を連続送信すると、17回目（開始から約29秒）で 429（quota exceeded）
 - 気づき・疑問：
     - 応答時間はほぼ「出力トークン数」で決まる。lite は短答 約1.5秒、約1000トークンの長文で約4.5秒
