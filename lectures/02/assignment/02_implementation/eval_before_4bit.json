@@ -1,0 +1,201 @@
+{
+  "summary": {
+    "label": "before_4bit",
+    "n": 21,
+    "format_rate": 0.6666666666666666,
+    "content_rate": 0.2857142857142857,
+    "both_rate": 0.2857142857142857,
+    "seconds": 32.1
+  },
+  "rows": [
+    {
+      "question": "開いているのは何時ですか",
+      "raw": "{\"answer\": \"9:30〜17:00\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "開園と閉園の時刻を教えてください",
+      "raw": "{\"answer\": \"開園は 9:30〜17:00、閉園は 16:00 です。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "最後は何時まで入園できますか",
+      "raw": "{\"answer\": \"16:00\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "年末年始は開いていますか",
+      "raw": "{\"answer\": \"確認が必要\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "休みの曜日と年末年始の予定を教えてください",
+      "raw": "{\"answer\": \"休みの曜日：水曜日、12 月 29 日〜1 月 1 日\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "水曜日は営業していますか",
+      "raw": "{\"answer\": \"はい\", \"needs_review\": \"false\"}",
+      "format_ok": false,
+      "format_reason": "wrong_type",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "料金は？",
+      "raw": "{\"answer\": \"800 円\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "大人1人あたりの入場料は？",
+      "raw": "{\"answer\": \"800\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "中学生以下の入園にお金はかかりますか",
+      "raw": "{\"answer\": \"確認が必要\", \"needs_review\": true}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "餌やりはどこでできますか",
+      "raw": "{\"answer\": \"ふれあい餌やり体験は毎日 11:00 と 14:00 に、ひろば前で行います。\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "餌やり体験の開催時刻と場所は？",
+      "raw": "{\"answer\": \"11:00 と 14:00\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "ひろば前では何時にふれあいができますか",
+      "raw": "{\"answer\": \"11:00\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "アクセスは？",
+      "raw": "{\"answer\": \"動物園前駅で徒歩 5 分\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": true,
+      "both_ok": true,
+      "gold_needs_review": false
+    },
+    {
+      "question": "どの駅で降りればよいですか",
+      "raw": "{\"answer\": \"動物園前駅\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "最寄り駅から入口まで徒歩で何分ですか",
+      "raw": "{\"answer\": \"5\", \"needs_review\": \"false\"}",
+      "format_ok": false,
+      "format_reason": "wrong_type",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": false
+    },
+    {
+      "question": "パンダはいますか",
+      "raw": "{\"answer\": \"はい\", \"needs_review\": false}",
+      "format_ok": true,
+      "format_reason": "",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "ベビーカーは貸し出していますか",
+      "raw": "{\"answer\": \"なし\", \"needs_review\": \"false\"}",
+      "format_ok": false,
+      "format_reason": "wrong_type",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "動物の写真撮影はできますか",
+      "raw": "{\"answer\": \"なし\", \"needs_review\": \"false\"}",
+      "format_ok": false,
+      "format_reason": "wrong_type",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "夜の動物園は開催しますか",
+      "raw": "{\"answer\": \"確認が必要\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "お弁当の持ち込みはできますか",
+      "raw": "{\"answer\": \"確認が必要\"}",
+      "format_ok": false,
+      "format_reason": "missing_key",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    },
+    {
+      "question": "障害者割引はありますか",
+      "raw": "{\"answer\": \"なし\", \"needs_review\": \"false\"}",
+      "format_ok": false,
+      "format_reason": "wrong_type",
+      "content_ok": false,
+      "both_ok": false,
+      "gold_needs_review": true
+    }
+  ]
+}

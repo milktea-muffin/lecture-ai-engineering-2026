@@ -1,0 +1,196 @@
+{
+  "「トークン」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "最小単位"
+    ]
+  },
+  "「過学習」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "学習データ",
+      "検証データ"
+    ]
+  },
+  "「ハルシネーション」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "もっともらしく"
+    ]
+  },
+  "「APIキー」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "秘密"
+    ]
+  },
+  "「量子化」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "ビット数",
+      "メモリ"
+    ]
+  },
+  "「エポック」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "1周",
+      "過学習"
+    ]
+  },
+  "「ガードレール」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "制約",
+      "検査"
+    ]
+  },
+  "「MCPクライアント」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "サーバーに接続"
+    ]
+  },
+  "「fork」とは何ですか？": {
+    "category": "same",
+    "must_include": [
+      "コピー"
+    ]
+  },
+  "LoRAについて簡単に説明してください。": {
+    "category": "same",
+    "must_include": [
+      "低ランク",
+      "アダプタ"
+    ]
+  },
+  "LLMって何ですか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "予測",
+      "文章"
+    ]
+  },
+  "temperatureを上げるとどうなりますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "多様"
+    ]
+  },
+  "rate limitに引っかかるとどんなエラーが出ますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "429"
+    ]
+  },
+  "LoRAのrは何を決める値ですか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "低ランク行列",
+      "大きさ"
+    ]
+  },
+  "QLoRAとLoRAの違いは何ですか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "量子化",
+      "4ビット"
+    ]
+  },
+  "エポック数を増やしすぎるとどうなりますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "過学習"
+    ]
+  },
+  "SFTではどんなデータを使いますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "入力",
+      "出力"
+    ]
+  },
+  "PEFTの利点は何ですか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "メモリ"
+    ]
+  },
+  "Codespacesに登録したシークレットはどのように渡されますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "環境変数"
+    ]
+  },
+  "devcontainer.jsonには何を書きますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "Python",
+      "拡張機能"
+    ]
+  },
+  "エージェントループはどんな処理の繰り返しですか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "ツール",
+      "最終回答"
+    ]
+  },
+  "Human-in-the-loopはどんなときに使いますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "取り消しにくい"
+    ]
+  },
+  "TestModelを使うと何ができますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "APIキー"
+    ]
+  },
+  "stdioとStreamable HTTPの違いを教えてください。": {
+    "category": "paraphrase",
+    "must_include": [
+      "サブプロセス",
+      "URL"
+    ]
+  },
+  "ファインチューニングで最新の事実を覚えさせるのは向いていますか？": {
+    "category": "paraphrase",
+    "must_include": [
+      "RAG"
+    ]
+  },
+  "「Transformer」とは何ですか？": {
+    "category": "unknown",
+    "must_include": []
+  },
+  "「RLHF」とは何ですか？": {
+    "category": "unknown",
+    "must_include": []
+  },
+  "「Docker」とは何ですか？": {
+    "category": "unknown",
+    "must_include": []
+  },
+  "「ベクトルデータベース」とは何ですか？": {
+    "category": "unknown",
+    "must_include": []
+  },
+  "「LangChain」とは何ですか？": {
+    "category": "unknown",
+    "must_include": []
+  },
+  "プロンプトインジェクションについて簡単に説明してください。": {
+    "category": "unknown",
+    "must_include": []
+  },
+  "「Kubernetes」とは何ですか？": {
+    "category": "unknown",
+    "must_include": []
+  },
+  "知識蒸留について簡単に説明してください。": {
+    "category": "unknown",
+    "must_include": []
+  }
+}

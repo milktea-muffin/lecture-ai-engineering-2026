@@ -1,0 +1,245 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 33,
+    "same_rate": 0.7,
+    "paraphrase_rate": 0.2,
+    "unknown_declined": 0,
+    "unknown_answered": 8,
+    "unknown_n": 8,
+    "seconds": 125.3
+  },
+  "rows": [
+    {
+      "question": "「トークン」とは何ですか？",
+      "category": "same",
+      "raw": "LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、モデルの特性（トークン数）に関わる。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "「過学習」とは何ですか？",
+      "category": "same",
+      "raw": "学習データにだけ過度に適合し、未知の入力に対する性能が落ちる状態。学習に使わない検証データで性能を測って気づく。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "「ハルシネーション」とは何ですか？",
+      "category": "same",
+      "raw": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や部門に固有の情報など）を、自分の口調で広めるために起こる。本講座では、ツールを呼び出す前にモデルに明確に伝えることで、ハルシネーションを減らす。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "「APIキー」とは何ですか？",
+      "category": "same",
+      "raw": "APIを呼び出す先を明示的に指定する秘密の文字列。漏れると他人がツールを呼び出し、その結果を読むなどの攻撃を始める。本講座では「設定ファイルの secret 分野」に書く。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "「量子化」とは何ですか？",
+      "category": "same",
+      "raw": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "「エポック」とは何ですか？",
+      "category": "same",
+      "raw": "学習データ全体を1周学習することを1エポックと数える。回数を増やしすぎると過学習しやすい。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "「ガードレール」とは何ですか？",
+      "category": "same",
+      "raw": "エージェントの行動を一定の範囲以内に抑える仕組み。指示文で定める（制約文、出力制限、外部データへのアクセス制限など）。本講座では「ツールの使用量・出力の長さ・外部データへのアクセス」をモデルに渡すのが例だ。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "「MCPクライアント」とは何ですか？",
+      "category": "same",
+      "raw": "MCPのツールを公開する側。公開するツールは、ツール定義ファイル（.mcp_defs.json）に書かれたものではなく、実際にツールを呼び出す関数（public function）に相当する。公開する際に使うメソッドは、ツール定義ファイルにある public() 呼び出しをモデルに渡す。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "「fork」とは何ですか？",
+      "category": "same",
+      "raw": "他人のrepoを自分のアカウントに丸ごとコピーする行為。自分のforkは、本人のrepoとしてアクセス可能だが、他人のforkは公開不能。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "LoRAについて簡単に説明してください。",
+      "category": "same",
+      "raw": "学習する行列の大きさを増やしすぎないための手法。低ランク行列（低ランクベクトル）を高ランク行列（学習用重み）に約20%の行列を置き換える。学習するパラメータが少なくなるため、計算量とメモリが節約できる。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "LLMって何ですか？",
+      "category": "paraphrase",
+      "raw": "大規模テキストベースのモデル。入力に続くトークンを予測することで文脈を続きを作る。質問応答、コード生成、ツール呼び出し、多言語翻訳など多くのタスクを、指示（プロンプト）を変えるだけでこなせる。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "temperatureを上げるとどうなりますか？",
+      "category": "paraphrase",
+      "raw": "生成した回答の多様さを増す。同じ質問でも異なる内容や形式のアプローチを提案するようになる。設定ファイルの top（0.1, 0.3, 1）は、この意味の半分。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "rate limitに引っかかるとどんなエラーが出ますか？",
+      "category": "paraphrase",
+      "raw": "HTTP 423（Rate Limit Exceeded）のエラー。指定した時間枠で呼び出せるリクエスト数の上限を超過したら、その超過の量を数えるほど理由を説明し、超過した分を再度呼び出す。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "LoRAのrは何を決める値ですか？",
+      "category": "paraphrase",
+      "raw": "学習率の1/100程度（0.001〜0.01）を選ぶ。大きい値で学習がすすleksし、小さい値で学習が緩やかになる。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "QLoRAとLoRAの違いは何ですか？",
+      "category": "paraphrase",
+      "raw": "LoRAは学習するパラメータを少なくする（重みを2ビットで表す）。LoRAはメモリと計算を節約できる。LoRAをより深く使うために使うのがQLoRA。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "エポック数を増やしすぎるとどうなりますか？",
+      "category": "paraphrase",
+      "raw": "学習データに過度に依存し、未知の入力への予測能力が落ちる。モデルが覚えすぎて現実の挙動と違う。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "SFTではどんなデータを使いますか？",
+      "category": "paraphrase",
+      "raw": "入力・出力のペア（例：質問と回答）や、ツールの説明・使用方法（RAGの追加プロンプト）などを学習する入力データ。モデルはこれを読み込み、学習し、次の質問に同じように答えられるように育つ。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "PEFTの利点は何ですか？",
+      "category": "paraphrase",
+      "raw": "モデルの全パラメータを、必要な少数のパラメータに分割し、分割したデータで学習する。学習するパラメータが少なくなるため、計算量とメモリが大幅に減る。また、学習するデータも少なくなるため、データセットが少なく学習できる。",
+      "content_ok": true,
+      "kind": ""
+    },
+    {
+      "question": "Codespacesに登録したシークレットはどのように渡されますか？",
+      "category": "paraphrase",
+      "raw": "GitHubのアカウント設定の「Codespaces」とは同じアカウントのいずれかのシークレット（公開・秘密・自動登録）がCodespacesに渡される。公開なシークレットはCodespacesに自動に登録され、Codespacesから別のアカウントへ渡すことはできない。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "devcontainer.jsonには何を書きますか？",
+      "category": "paraphrase",
+      "raw": "開発環境をコンテナとして定義するファイル。devcontainer/devcontainer.json に書き込むと、どのバージョンのPythonやどのツールを起動するかをJSONで指定できる。本講座ではPython3.9とdevcontainer/devcontainer.json を同じフォルダに置く。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "エージェントループはどんな処理の繰り返しですか？",
+      "category": "paraphrase",
+      "raw": "モデルの呼び出しを、ツール呼び出しやファイル操作などの行動を、一定期間（例：10分）で続き、その結果を評価し、次の行動をモデルに戻すループ。本講座では「ツール呼び出し」をエージェントとして使うため、1つの行動で呼び出せる操作を複数回呼ぶのが典型例。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "Human-in-the-loopはどんなときに使いますか？",
+      "category": "paraphrase",
+      "raw": "複数の段階の処理やツールを、エージェントの2段階（指示と実行）で分けるときに使われる。指示段階で「この結果をAに渡す」とするときに使う。本講座では第2回演習で使う。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "TestModelを使うと何ができますか？",
+      "category": "paraphrase",
+      "raw": "LLMが実際にモデルとして使う入力と出力のサイクルを、エージェントの呼び出し先（TestModel）に丸ごととすること。テスト用のダミーデータで会話履歴やツールの結果を再現できる。本講座の第2回演習では、テスト用のTestModelをモデルに貼る。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "stdioとStreamable HTTPの違いを教えてください。",
+      "category": "paraphrase",
+      "raw": "MCPのサーバーとして使うための標準入力と標準出力。stdioでは、ツールを呼び出して出力させる（stdout）または入力させる（stderr）。Streamable HTTPでは、ツールを呼び出してHTTPを回す（POSTで出力、PUTで入力）。同じ機能の切り替えは可能だが、APIキーやログはstdioでは出る。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "ファインチューニングで最新の事実を覚えさせるのは向いていますか？",
+      "category": "paraphrase",
+      "raw": "はい、LLMは大量の教科書的な知識から、最新の情報や状況に合った事実を学習する。モデルは外部のデータやツールを呼び出すため、最新の内容を学習する前に取り込む必要がある。",
+      "content_ok": false,
+      "kind": ""
+    },
+    {
+      "question": "「Transformer」とは何ですか？",
+      "category": "unknown",
+      "raw": "LLMの処理を1つの層にまとめるモデル。2017年に提出され、AIE2017で世界大会に参戦。2022年よりLoRAで重量を減らす軽量版LoRA-Transformerが公開される。",
+      "content_ok": null,
+      "kind": "answered"
+    },
+    {
+      "question": "「RLHF」とは何ですか？",
+      "category": "unknown",
+      "raw": "モデルの出力を人の意見や評価で改善するループ。指示の書き方、評価の仕方、人の参加の質が大きく変わる。",
+      "content_ok": null,
+      "kind": "answered"
+    },
+    {
+      "question": "「Docker」とは何ですか？",
+      "category": "unknown",
+      "raw": "仮想環境の定義と起動をコードに任せ、他社の镜像を問わずすべての環境が同じになるためのプラットフォーム。",
+      "content_ok": null,
+      "kind": "answered"
+    },
+    {
+      "question": "「ベクトルデータベース」とは何ですか？",
+      "category": "unknown",
+      "raw": "大量のテキストや画像を共通のフォーマットで扱えるデータベース。AIがデータを読み込むとき、どの形式かを決めるかによって性能とコストが大きく変わる。Pydantic AIでは model_column 指定の型に依存する。",
+      "content_ok": null,
+      "kind": "answered"
+    },
+    {
+      "question": "「LangChain」とは何ですか？",
+      "category": "unknown",
+      "raw": "MCPのツールをLLMに渡すプラットフォーム。MCPサーバーをLangChainのプログラムに貼ることで、ツール呼び出しをコードのように書ibleにし、エージェントのループやプロンプトで制御できる。",
+      "content_ok": null,
+      "kind": "answered"
+    },
+    {
+      "question": "プロンプトインジェクションについて簡単に説明してください。",
+      "category": "unknown",
+      "raw": "LLMがツールを呼び出す時の入力文を、利用者の口調や目的に合わせて変える技術。指示文の選び方、ツール名の付け方、呼び出し時のメンター（追加文）の使い分けが、プロンプトインジェクションの成果に大きく影響する。",
+      "content_ok": null,
+      "kind": "answered"
+    },
+    {
+      "question": "「Kubernetes」とは何ですか？",
+      "category": "unknown",
+      "raw": "オープンソースのOSをコンテナとして使うプラットフォーム。エージェントの起動、作業フロー、ツール呼び出しをコンテナ内で処理できる。本講座では「Kubernetesエージェント」と呼ぶ。",
+      "content_ok": null,
+      "kind": "answered"
+    },
+    {
+      "question": "知識蒸留について簡単に説明してください。",
+      "category": "unknown",
+      "raw": "モデルの出力を、重要な情報に絞るための手法。出力の多様さを少すって、出力の安定した値を絞る。Pydantic AIでは output_type に言語を指定できる。",
+      "content_ok": null,
+      "kind": "answered"
+    }
+  ]
+}
