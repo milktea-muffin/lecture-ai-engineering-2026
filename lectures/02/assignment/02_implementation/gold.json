@@ -1,0 +1,143 @@
+{
+  "開いているのは何時ですか": {
+    "needs_review": false,
+    "must_include": [
+      "9:30",
+      "17:00"
+    ]
+  },
+  "開園と閉園の時刻を教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "9:30",
+      "17:00"
+    ]
+  },
+  "最後は何時まで入園できますか": {
+    "needs_review": false,
+    "must_include": [
+      "9:30",
+      "17:00"
+    ]
+  },
+  "年末年始は開いていますか": {
+    "needs_review": false,
+    "must_include": [
+      "水曜",
+      "12 月 29 日"
+    ]
+  },
+  "休みの曜日と年末年始の予定を教えてください": {
+    "needs_review": false,
+    "must_include": [
+      "水曜",
+      "12 月 29 日"
+    ]
+  },
+  "水曜日は営業していますか": {
+    "needs_review": false,
+    "must_include": [
+      "水曜",
+      "12 月 29 日"
+    ]
+  },
+  "料金は？": {
+    "needs_review": false,
+    "must_include": [
+      "800 円",
+      "無料"
+    ]
+  },
+  "大人1人あたりの入場料は？": {
+    "needs_review": false,
+    "must_include": [
+      "800 円",
+      "無料"
+    ]
+  },
+  "中学生以下の入園にお金はかかりますか": {
+    "needs_review": false,
+    "must_include": [
+      "800 円",
+      "無料"
+    ]
+  },
+  "餌やりはどこでできますか": {
+    "needs_review": false,
+    "must_include": [
+      "11:00",
+      "14:00"
+    ]
+  },
+  "餌やり体験の開催時刻と場所は？": {
+    "needs_review": false,
+    "must_include": [
+      "11:00",
+      "14:00"
+    ]
+  },
+  "ひろば前では何時にふれあいができますか": {
+    "needs_review": false,
+    "must_include": [
+      "11:00",
+      "14:00"
+    ]
+  },
+  "アクセスは？": {
+    "needs_review": false,
+    "must_include": [
+      "動物園前駅",
+      "5 分"
+    ]
+  },
+  "どの駅で降りればよいですか": {
+    "needs_review": false,
+    "must_include": [
+      "動物園前駅",
+      "5 分"
+    ]
+  },
+  "最寄り駅から入口まで徒歩で何分ですか": {
+    "needs_review": false,
+    "must_include": [
+      "動物園前駅",
+      "5 分"
+    ]
+  },
+  "パンダはいますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "ベビーカーは貸し出していますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "動物の写真撮影はできますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "夜の動物園は開催しますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "お弁当の持ち込みはできますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  },
+  "障害者割引はありますか": {
+    "needs_review": true,
+    "must_include": [
+      "確認"
+    ]
+  }
+}
