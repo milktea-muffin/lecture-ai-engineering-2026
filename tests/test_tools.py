@@ -53,6 +53,25 @@ def test_make_quiz_reports_missing_lecture():
     assert "用語集にありません" in tools.make_quiz(99)
 
 
+def test_learning_logs_are_saved_without_overwriting(tmp_path, monkeypatch):
+    monkeypatch.setattr(tools, "LEARNING_LOG_DIR", tmp_path / "learning_log")
+    tools.save_learning_log(3, "ツールの登録方法を学んだ。")
+    tools.save_learning_log(3, "保存には承認が必要。")
+    files = list(tools.LEARNING_LOG_DIR.glob("*.md"))
+    assert len(files) == 2
+    assert {p.read_text(encoding="utf-8") for p in files} == {
+        "# 第3回 学習記録\n\nツールの登録方法を学んだ。\n",
+        "# 第3回 学習記録\n\n保存には承認が必要。\n",
+    }
+
+
+def test_learning_log_rejects_invalid_input(tmp_path, monkeypatch):
+    monkeypatch.setattr(tools, "LEARNING_LOG_DIR", tmp_path / "learning_log")
+    assert "保存できません" in tools.save_learning_log(0, "学習内容")
+    assert "保存できません" in tools.save_learning_log(3, "  ")
+    assert not tools.LEARNING_LOG_DIR.exists()
+
+
 def test_default_question_of_lecture1_is_answerable_from_glossary():
     """第1回の既定の質問（app.ask）は、第3回のエージェントが用語集で正しく答えられること。"""
     from app.ask import DEFAULT_QUESTION
