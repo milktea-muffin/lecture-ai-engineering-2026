@@ -5,11 +5,29 @@
 """
 
 import json
+import random
 from functools import cache
 from pathlib import Path
+from uuid import uuid4
 
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+LEARNING_LOG_DIR = Path(__file__).resolve().parent.parent / "learning_log"
 MAX_RESULTS = 3
+
+
+def save_learning_log(lecture: int, content: str) -> str:
+    """利用者が保存を希望したとき、学んだ回と内容を learning_log/ に新規保存する。
+
+    lecture は1始まりの講義回、content は保存する学習内容。
+    保存前にエージェント側で利用者の承認が必要。既存の記録は上書きしない。
+    """
+    if lecture < 1 or not content.strip():
+        return "保存できません。1以上の講義回と空でない学習内容を指定してください。"
+    LEARNING_LOG_DIR.mkdir(parents=True, exist_ok=True)
+    path = LEARNING_LOG_DIR / f"lecture-{lecture:02d}-{uuid4().hex}.md"
+    with path.open("x", encoding="utf-8") as f:
+        f.write(f"# 第{lecture}回 学習記録\n\n{content}\n")
+    return f"学習記録を保存しました: {path}"
 
 
 @cache
@@ -63,6 +81,22 @@ def search_glossary(query: str) -> str:
             }
             for e in hits
         ],
+        ensure_ascii=False,
+    )
+
+
+def make_quiz(lecture: int) -> str:
+    """指定した回（1始まりの整数）の用語から1つ選び、確認問題と答えを返す。
+
+    「第2回の確認問題を出して」のように、復習用の問題を求められたときに使う。
+    問題文と用語の定義を、それぞれ question と answer に入れたJSON文字列で返す。
+    """
+    terms = [entry for entry in load_glossary() if entry["lecture"] == lecture]
+    if not terms:
+        return f"第{lecture}回の用語は用語集にありません。"
+    entry = random.choice(terms)
+    return json.dumps(
+        {"question": f"「{entry['term']}」の意味は？", "answer": entry["definition"]},
         ensure_ascii=False,
     )
 
