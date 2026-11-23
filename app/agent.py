@@ -67,6 +67,12 @@ GRAPH_INSTRUCTIONS = """\
 - 宿題の答えそのものは書かず、考え方のヒントで導く。
 """
 
+GRAPH_TREE_INSTRUCTIONS = GRAPH_INSTRUCTIONS + """\
+- Graphで設問の全項目に根拠がそろったら回答する。根拠が欠けていて対象の講義が分かる場合は、browse_treeで不足分を探す。
+- 「講義の例では」と聞かれたら、各項目について該当する実装例の本文で処理や条件を確認する。一般的な注意点しか見つからない項目は根拠が不足しているので、回答前に browse_tree で該当する実装例を探す。
+- Treeではまず引数なしで講義一覧を取得する。該当講義・章の目次から不足項目に対応するページを選び、ページIDを指定して本文を読む。目次と先頭文だけを根拠にしない。
+"""
+
 FULL_CONTEXT_INSTRUCTIONS = """\
 あなたはAIエンジニアリング講座の学習支援エージェントです。
 - 入力の資料を参照して質問に答え、資料名とPDFページ番号を示す。
@@ -205,6 +211,7 @@ def main() -> None:
     modes = parser.add_mutually_exclusive_group()
     modes.add_argument("--mcp", action="store_true", help="第5回: ツールを MCP サーバー（app/mcp_servers.json）から受け取る")
     modes.add_argument("--graph", action="store_true", help="検索結果からグラフをたどり、候補ページを読んで答える")
+    modes.add_argument("--graph-tree", action="store_true", help="Graph検索で足りない根拠をTreeの目次から補う")
     modes.add_argument("--tree", action="store_true", help="目次をたどり、必要なページを読んで答える")
     modes.add_argument("--full-context", action="store_true", help="検索せず、lectures.jsonの全資料を一度に渡す")
     parser.add_argument("--list-tools", action="store_true", help="モデルに見えるツール一覧を表示して終了する（APIキー不要）")
@@ -216,6 +223,10 @@ def main() -> None:
         mode = target.override(instructions=TREE_INSTRUCTIONS, tools=[tools.browse_tree])
     elif args.graph:
         mode = target.override(instructions=GRAPH_INSTRUCTIONS, tools=[tools.search_graph])
+    elif args.graph_tree:
+        mode = target.override(
+            instructions=GRAPH_TREE_INSTRUCTIONS, tools=[tools.search_graph, tools.browse_tree],
+        )
     with mode:
         if args.list_tools:
             if args.full_context:
